@@ -1,0 +1,29 @@
+.checkoutProduct{
+    display:flex;
+
+}
+.Product_image{
+    object-fit: contain;
+    width: 280px;
+    height: 280px;
+    margin-left: 50px;
+}
+.Product_title{
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 60px;
+}
+.Product_info{
+    padding-left: 20px;
+
+}
+.Product_info > button{
+    background-color: yellow;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: yellow;
+    color: black;
+    margin-top: 40px;
+    width: 200px;
+    height: 40px;
+}
