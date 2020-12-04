@@ -3,8 +3,8 @@ export const intialState={
     user:null,
 }
 
-export const getCartTotal =(cart) =>(
-cart.reducer((price,item) => item.price + price,0)); 
+export const getCartTotal =(cart) =>
+cart.reduce((price,item) => item.price + price,0); 
 
 const reducer = (state,action) => {
 console.log(action);
@@ -14,7 +14,10 @@ console.log(action);
             ...state,
                 cart: [...state.cart,action.item],
         };
-     
+        case "VIEW_ITEM":
+         return{
+             ...state,
+         }
         case "REMOVE_FROM_CART":
 
         let newCart = [...state.cart];

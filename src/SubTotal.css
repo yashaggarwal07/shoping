@@ -19,3 +19,9 @@
     border-color: yellow;
     color: black;
 }
+.value_items{
+    background-color: lightgrey;
+    border: 0px;
+    font-size: 20px;
+    font-weight: 800;
+}

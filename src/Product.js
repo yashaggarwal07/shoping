@@ -2,7 +2,6 @@ import React from 'react';
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
 import { Link } from "react-router-dom";
-import Detail from "./Detail";
 
 function Product({id,title,image,price}) {
     const [{},dispatch] = useStateValue();
@@ -17,6 +16,17 @@ dispatch({
     },
 })
 };
+const viewItem = () => {
+    dispatch({
+        type:'VIEW_ITEM',
+        item:{
+            id: id,
+            title: title,
+            image:image,
+            price:price
+        },
+    })
+    };
 
     return (
         <div className="product">
@@ -29,7 +39,7 @@ dispatch({
             </div>
             <img src={image} alt="product" />
             <Link to="/Detail">
-                <span className="view">View Product</span>
+            <button className="viewItem" onClick={viewItem}>View Item</button>
                 
             </Link>
             <button onClick={addToCart}>Add To Cart</button>

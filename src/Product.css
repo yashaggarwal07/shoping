@@ -29,7 +29,9 @@ margin-top: 5px;
     border: 1px solid;
     border-color: yellow;
 }
-.view{
-    text-decoration: none;
-    color: black;
+.viewItem{
+    background-color: rgb(17, 180, 185);
+    border: 1px solid;
+    border-color: cadetblue;
+    margin-bottom: 10px;
 }

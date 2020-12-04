@@ -1,14 +1,23 @@
 import React from 'react';
-import "./Detail.css";
-//import { useStateValue } from "./StateProvider";
+import { useStateValue } from "./StateProvider";
+import DetailProduct from "./DetailProduct";
 
-function Detail({id,title,image,price}) {
-   // const [{ cart }] = useStateValue();
-    return (
-        <div>
-            
-        </div>
-    )
+function Detail() {
+ const [{ cart }] = useStateValue();
+ return (
+     <div>
+ {cart?.map(item =>{
+    return(
+         <DetailProduct 
+         id = {item.id}
+         title ={item.title}
+         image = {item.image}
+         price = {item.price}
+         />
+)
+    })}
+    </div>
+ )
 }
 
 export default Detail

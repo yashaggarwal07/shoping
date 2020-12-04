@@ -7,7 +7,7 @@ import { useStateValue } from "./StateProvider";
 
 function Header() {
  const [{ cart }] = useStateValue();
- console.log(cart);
+
     return (
         <nav className="header">
             <Link to="/">
