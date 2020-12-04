@@ -1,10 +1,10 @@
 import React from 'react';
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 function Product({id,title,image,price}) {
-    const [initialState,dispatch] = useStateValue();
+    const [,dispatch] = useStateValue();
 const addToCart = () => {
 dispatch({
     type:'ADD_TO_CART',

@@ -3,7 +3,7 @@ import "./DetailProduct.css";
 import { useStateValue } from "./StateProvider";
 
 function DetailProduct({id,title,image,price}) {
-    const [initialState,dispatch] = useStateValue();   
+    const [,dispatch] = useStateValue();   
     const addToCart = () => {
         dispatch({
             type:'ADD_TO_CART',
