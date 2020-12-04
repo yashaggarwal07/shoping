@@ -1,6 +1,7 @@
 export const intialState={
     cart:[],
     user:null,
+    displayCart:[],
 }
 
 export const getCartTotal =(cart) =>
@@ -15,9 +16,15 @@ console.log(action);
                 cart: [...state.cart,action.item],
         };
         case "VIEW_ITEM":
-         return{
-             ...state,
-         }
+        //  if(displayCart.length >=1){
+        //     displayCart =[];
+               
+        //  }else{
+        //     displayCart= [...state.displayCart,action.item]
+        //  }
+         return { 
+             displayCart:[...state.cart,action.item]
+          }; 
         case "REMOVE_FROM_CART":
 
         let newCart = [...state.cart];

@@ -3,7 +3,7 @@ import "./DetailProduct.css";
 import { useStateValue } from "./StateProvider";
 
 function DetailProduct({id,title,image,price}) {
-    const [{},dispatch] = useStateValue();   
+    const [initialState,dispatch] = useStateValue();   
     const addToCart = () => {
         dispatch({
             type:'ADD_TO_CART',
@@ -18,7 +18,7 @@ function DetailProduct({id,title,image,price}) {
     return (
         <div className="product_detail">
            <div className="image_view">
-            <img src={image} alt="image"/>
+            <img src={image} alt="ima"/>
             </div>
             <div className="detail_product">
             <p className="Product_title">{title}</p>
@@ -26,7 +26,8 @@ function DetailProduct({id,title,image,price}) {
                 <small>Rs</small>
             <strong>{price}</strong>
             </p>
-               </div>
+            <button className="add_cart" onClick={addToCart}>Add To Cart</button>
+            </div>
            
     </div>
 
